@@ -1,9 +1,9 @@
-<h4>Respostas:</h4>
+<h6>Respostas:</h6>
 <% @post.comments.each do |comment| %>
 
-    <div class="well">
+    <div class="well" style="background:LightSteelBlue">
 
-        <p><strong><%= comment.username %> </strong>: <%= comment.body %>
+        <p class="form-control"><strong><%= comment.username %> </strong>: <%= comment.body %>
             <%= link_to '[X]',[comment.post, comment],
             method: :delete,
             data: {confirm: 'Tem Certeza?'} %>

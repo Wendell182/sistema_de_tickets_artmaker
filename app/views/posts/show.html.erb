@@ -1,7 +1,8 @@
-<h2><%= @post.category %></h2>
-<p><%= @post.title %></p>
-<p><%= @post.body %></p>
-
+<div class="well" style="background:LightSteelBlue">
+    <h4 ><%= @post.category %></h4>
+    <p class="form-control"><%= @post.title %></p>
+    <p class="form-control"><%= @post.body %></p>
+</div>
 <hr>
 
 <%= render 'comments/comments' %>
