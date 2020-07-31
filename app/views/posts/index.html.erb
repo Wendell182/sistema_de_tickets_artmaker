@@ -1,0 +1,12 @@
+<h1>Tickets' Write</h1>
+<%#= test = Time.now.to_s %>
+<% @posts.each do |post| %>
+    <div class="well" style="background:LightSteelBlue">
+        <h3 class="form-control"><%= post.category %></h3>
+        <p class="form-control"><%= post.title %></p>
+        <p class="form-control"><%= post.body %></p>
+        <p class="form-control"><%= post.created_at.to_s(:post) %></p>
+        <%= link_to "Ver Ticket", post_path(post),:class => 'btn btn-primary' %>
+    </div>
+    <hr>
+<% end %> 

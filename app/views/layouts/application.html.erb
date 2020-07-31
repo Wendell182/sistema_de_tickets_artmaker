@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ticketart</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+    <p class="notice"><% notice %></p>
+    <p class="alert"><% alert %></p>
+
+     <div class="navbar navbar-expand md py-3 mb-4">
+    <nav class="nav d-flex justify-content-between">
+      <ul>
+        <li> <%= link_to "Home", home_path%></li>
+      </ul>
+      <ul>
+        <li> <%= link_to "New", new_post_path%></li>
+      </ul>
+    </nav>
+  </div>
+
+   <div class="container">
+    <%= yield %>
+   </div>  
+   
+  </body>
+</html>

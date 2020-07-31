@@ -1,0 +1,1 @@
+Time::DATE_FORMATS[:post] = "criado em %d/%m/%Y - %Hh%M"

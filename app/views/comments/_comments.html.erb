@@ -1,0 +1,14 @@
+<h4>Respostas:</h4>
+<% @post.comments.each do |comment| %>
+
+    <div class="well">
+
+        <p><strong><%= comment.username %> </strong>: <%= comment.body %>
+            <%= link_to '[X]',[comment.post, comment],
+            method: :delete,
+            data: {confirm: 'Tem Certeza?'} %>
+        </p>
+
+    </div>
+
+<% end %>
