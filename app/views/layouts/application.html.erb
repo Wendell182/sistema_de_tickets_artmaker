@@ -20,17 +20,27 @@
         <li> <%= link_to "Home", home_path%></li>
       </ul>
 
+      <%# if user_signed_in? %>
+      <ul>
+        <li> <%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
+      </ul>  
+      <%# else %>
+
       <ul>
         <li> <%= link_to "Login", new_user_session_path%></li>
       </ul>
-      
+
       <ul>
-        <li> <%= link_to "Logout", destroy_user_session_path, method: :delete%></li>
+        <li> <%= link_to "Sign up", new_user_registration_path%></li>
       </ul>
 
       <ul>
-        <li> <%= link_to "New", new_post_path%></li>
+        <li> <%= link_to "Add Ticket", new_post_path%></li>
       </ul>
+      <%#end%>
+      
+
+
     </nav>
   </div>
 
