@@ -7,4 +7,3 @@ require_relative 'application'
 Rails.application.initialize!
 
 
-#Time::DATE_FORMATS[:post] = "criado em % d/% m/% Y - % H:% M"

@@ -16,3 +16,4 @@ class CommentsController < ApplicationController
         params.require(:comment).permit(:username, :body)
     end
 end
+current_user.comments.build(post_params)

@@ -2,12 +2,13 @@
 <% @post.comments.each do |comment| %>
 
     <div class="well" style="background:LightSteelBlue">
-
-        <p class="form-control"><strong><%= comment.username %> </strong>: <%= comment.body %>
+        
+        <p class="form-control"><strong><%= current_user.email %> </strong>: <%= comment.body %>
             <%= link_to '[X]',[comment.post, comment],
             method: :delete,
             data: {confirm: 'Tem Certeza?'} %>
         </p>
+        <p class="form-control"><%= comment.created_at.to_s(:comment) %></p>
         
        
     </div>

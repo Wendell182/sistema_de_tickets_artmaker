@@ -7,7 +7,7 @@
         <p class="form-control"><%= post.body %></p>
         <p class="form-control"><%= "#{post.created_at.to_s(:post)} por: #{post.user.email}" %></p>
          
-        <%= link_to "Ver Ticket", post_path(post),:class => 'btn btn-primary' %>
+        <%= link_to "Responder", post_path(post),:class => 'btn btn-primary' %>
     </div>
     <hr>
 <% end %> 
