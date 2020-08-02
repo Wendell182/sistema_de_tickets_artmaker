@@ -5,9 +5,10 @@
             <div class="alert alert-danger"><%= msg %></div>
         <% end %>    
     <% end %>
+<div class="addticket">
 <p>
     <%= f.label :category %><br>
-    <%= select("post","category",['Dúvidas','Críticas','Sugestões','Outros'], {include_blank: true})%>
+    <%= select("post","category",['Dúvidas','Críticas','Sugestões','Outros'], {include_blank: false})%>
     <%#f.text_field :category, {:class => 'form-control'} %>
 </p>
 
@@ -24,5 +25,5 @@
 <p>
     <%= f.submit :class => 'btn btn-primary' %>
 </p>
-
+</div>
 <% end %>
